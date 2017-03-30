@@ -69,7 +69,10 @@ add_action( 'after_setup_theme', 'giga_store_content_width', 0 );
 function giga_store_theme_stylesheets() {
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/css/bootstrap.css', array(), '3.3.6' );
 	wp_enqueue_style( 'giga-store-stylesheet', get_stylesheet_uri(), array(), '1.0.4', 'all' );
-	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.min.css', array(), '4.6.3' );
+	/*wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/css/font-awesome.css', array(), '4.6.3' );*/
+
+	
+	wp_enqueue_style('Font_Awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css');
 	wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/css/flexslider.css', array(), '2.6.0' );
 	wp_enqueue_style( 'of-canvas-menu', get_template_directory_uri() . '/css/jquery.mmenu.all.css', array(), '5.5.3' );
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/css/animate.min.css', array(), '3.5.1' );
@@ -239,7 +242,9 @@ if ( class_exists( 'WooCommerce' ) ) {
 
 		function giga_store_cart_link() {
 			?>	
+			
 			<a class="cart-contents text-right" href="<?php echo esc_url( WC()->cart->get_cart_url() ); ?>" title="<?php esc_html_e( 'View your shopping cart', 'giga-store' ); ?>">
+
 				<i class="fa fa-shopping-cart"><span class="count"><?php echo wp_kses_data( WC()->cart->get_cart_contents_count() ); ?></span></i><div class="amount-title"><?php echo esc_html_e( 'Cart ', 'giga-store' ); ?></div><div class="amount-cart"><?php echo wp_kses_data( WC()->cart->get_cart_subtotal() ); ?></div> 
 			</a>
 			<?php

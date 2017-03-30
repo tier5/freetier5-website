@@ -66,7 +66,6 @@ $table_prefix = 'wp_';
 
 
 
-
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */

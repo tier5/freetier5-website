@@ -1217,7 +1217,7 @@ input, select, textarea {
     padding: 10px 5px;
     height: 40px;
     line-height: 25px;
-    color: #ffffff;
+    /*color: #ffffff;*/
     float: left;
 }
 .header-cart .count {
